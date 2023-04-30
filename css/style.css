@@ -554,8 +554,8 @@ section{
     } 
 
     .inicio{
-        background-size: auto 100vh;
-        
+        background-size: contain;
+        background-position: center;
     }
 }
 
