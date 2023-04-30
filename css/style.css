@@ -435,6 +435,11 @@ section{
         display: block;
     }
 
+    .inicio{
+        background-size: auto 100vh;
+        
+    }
+
     .logo{
         width: 20rem;
         cursor: default ;
