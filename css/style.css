@@ -436,7 +436,7 @@ section{
     }
 
     .inicio{
-        background-size: auto 100%;
+        background-size: 100vw 100vh;
         
     }
 
