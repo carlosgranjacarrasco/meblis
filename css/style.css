@@ -435,11 +435,6 @@ section{
         display: block;
     }
 
-    .inicio{
-        background-size: auto;
-        
-    }
-
     .logo{
         width: 20rem;
         cursor: default ;
@@ -557,6 +552,11 @@ section{
     html{
         font-size:45%;
     } 
+
+    .inicio{
+        background-size: auto 100vh;
+        
+    }
 }
 
 @media (max-width:365px){
