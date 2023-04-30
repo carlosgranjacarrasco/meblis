@@ -81,6 +81,8 @@ section{
     background: url(../imagenes/cielo1.jpg) no-repeat;
     background-size: cover;
     background-attachment:fixed;
+    background-position: center center; 
+    min-height: auto;  
 }
 
 .meblis-img img{
@@ -130,8 +132,8 @@ section{
 
 
 .acerca-contenido{
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
     text-align: justify;
 }
 
@@ -487,16 +489,51 @@ section{
     .profes-img img{
         width:17vw;
     }
-    
-}
 
-@media (max-width:660px){
+    .meblis-img img{
+        animation: floatImage 4s ease-in-out infinite;
+        margin-top: 10rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:50vw;
+        position: relative;
+        bottom: 5rem;
+    }
+    
+    .isla-img img{
+        animation: floatImage 4s ease-in-out infinite;
+        animation-delay: 0.2s;
+        margin-top: 1px;
+        margin-left: auto;
+        margin-right: auto;
+        width:70vw;
+        display: block;
+        margin-top: -20vw;
+    }
+
     .instalaciones-img img{
         width:30vw;
     }
 
     .instalaciones-contenido .grande{
         width:35vw;
+    }
+    
+}
+
+@media (max-width:660px){
+
+    .instalaciones-img:first-child{
+        margin-bottom: -15rem;
+    }
+
+    .profes-img img{
+        width:30vw;
+    }
+
+    .profes-img{
+        margin-bottom: -5rem;
     }
 
 }
@@ -521,4 +558,6 @@ section{
     html{
         font-size:40%;
     } 
+
+   
 }

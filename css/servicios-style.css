@@ -30,7 +30,7 @@ body{
 
 section{
     min-height: 70vh;
-    padding: 9%;
+    padding: 10rem 9% 2rem; /* rem size is the percentage compared to its parent so in this case it's 10 times the size of its parent*/
 }
 
 .header{
