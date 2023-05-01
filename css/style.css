@@ -288,6 +288,7 @@ section{
     background-size:cover;
     inset:0;
     opacity: .3;
+    z-index: 0;
 }
 
 .profes .titulo{
