@@ -77,13 +77,21 @@ section{
     display:none;
 }
 
-.inicio{
-    background: url(../imagenes/cielo1.jpg) no-repeat;
+.inicio:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url(../imagenes/cielo1.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-attachment:fixed;
-    background-position: center center; 
-    min-height: auto;  
-}
+  }
 
 .meblis-img img{
     animation: floatImage 4s ease-in-out infinite;
@@ -535,9 +543,6 @@ section{
     .profes-img{
         margin-bottom: -5rem;
     }
-
-   
-
 }
 
 @media (max-width:500px){
@@ -555,13 +560,4 @@ section{
         font-size:45%;
     } 
 
-    .inicio{
-        background: url(../imagenes/cielo1-pequeño.jpg) no-repeat;
-        background-size: cover;
-        background-attachment:fixed;
-        background-position: center center; 
-        min-height: auto;
-        width: 100vw;
-        height: 70vh;  
-    }
 }
