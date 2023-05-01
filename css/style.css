@@ -80,9 +80,9 @@ section{
 .inicio{
     background: url(../imagenes/cielo1.jpg) no-repeat;
     background-size: cover;
-    background-attachment:fixed;
-    background-position: center center; 
-    min-height: auto;  
+    display: flex;
+    align-items: center;
+    z-index: 100;
 }
 
 .meblis-img img{
@@ -552,11 +552,6 @@ section{
     html{
         font-size:45%;
     } 
-
-    .inicio{
-        background-size: 400px 100vh;
-        background-position: center center;
-    }
 }
 
 @media (max-width:365px){
