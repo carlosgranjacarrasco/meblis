@@ -444,10 +444,6 @@ section{
     #menu-icon{
         display: block;
     }
-
-    .logo{
-        width: 25rem;
-    }
     
     .navbar{
         position:absolute;

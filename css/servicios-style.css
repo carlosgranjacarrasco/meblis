@@ -229,10 +229,6 @@ section{
     html{
         font-size:50%;
     } 
-
-    .logo{
-        width: 25rem;
-    }
 }
 
 @media (max-width:420px){
