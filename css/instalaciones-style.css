@@ -48,7 +48,7 @@ section{
 }
 
 .logo{
-  width: 15vw;
+  width: 20rem;
   cursor: pointer ;
   position: relative;
 }
@@ -351,6 +351,10 @@ section{
   #menu-icon{
       display: block;
   }
+
+  .logo{
+    width: 25rem;
+}
   
   .navbar{
       position:absolute;

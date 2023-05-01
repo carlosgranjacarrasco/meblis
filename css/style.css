@@ -48,7 +48,7 @@ section{
 }
 
 .logo{
-    width: 15vw;
+    width: 20rem;
     cursor: pointer ;
     position: relative;
 }
@@ -443,6 +443,10 @@ section{
 @media (max-width:980px){
     #menu-icon{
         display: block;
+    }
+
+    .logo{
+        width: 25rem;
     }
     
     .navbar{

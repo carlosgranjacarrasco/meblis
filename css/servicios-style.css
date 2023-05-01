@@ -48,7 +48,7 @@ section{
 }
 
 .logo{
-    width: 15vw;
+    width: 20rem;
     cursor: pointer ;
     position: relative;
 }
@@ -229,6 +229,10 @@ section{
     html{
         font-size:50%;
     } 
+
+    .logo{
+        width: 25rem;
+    }
 }
 
 @media (max-width:420px){
