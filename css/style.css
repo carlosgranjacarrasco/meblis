@@ -536,6 +536,14 @@ section{
         margin-bottom: -5rem;
     }
 
+    .inicio{
+        background: url(../imagenes/cielo1-pequeño.jpg) no-repeat;
+        background-size: cover;
+        background-attachment:fixed;
+        background-position: center center; 
+        min-height: auto;  
+    }
+
 }
 
 @media (max-width:500px){
