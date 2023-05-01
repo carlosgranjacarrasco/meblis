@@ -413,7 +413,7 @@ section{
 }
 
 .pie-texto p{
-    font-size: 2vw;
+    font-size: 15px;
     display: inline-block;
     justify-content: space-between;
     align-items: center;
@@ -544,6 +544,10 @@ section{
 
     .profes-img{
         margin-bottom: -5rem;
+    }
+
+    .pie-texto p{
+        font-size: 2vw;     
     }
 }
 
