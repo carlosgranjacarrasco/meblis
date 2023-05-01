@@ -80,9 +80,9 @@ section{
 .inicio{
     background: url(../imagenes/cielo1.jpg) no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    z-index: 100;
+    background-attachment:fixed;
+    background-position: center center; 
+    min-height: auto;  
 }
 
 .meblis-img img{
@@ -196,7 +196,7 @@ section{
 .instalaciones{
     min-height: 50vh;
     position: relative;
-    background-color: #e8c5f7;
+    background-color: #ffffff;
     /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
 }
 
@@ -552,6 +552,7 @@ section{
     html{
         font-size:45%;
     } 
+
 }
 
 @media (max-width:365px){
