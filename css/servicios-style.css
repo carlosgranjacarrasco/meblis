@@ -245,9 +245,3 @@ section{
         font-size:45%;
     } 
 }
-
-@media (max-width:365px){
-    html{
-        font-size:40%;
-    } 
-}
