@@ -248,4 +248,8 @@ section{
     html{
         font-size:45%;
     } 
+
+    .logo{
+        margin-bottom: -2.6rem;
+    }
 }

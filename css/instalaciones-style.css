@@ -423,4 +423,8 @@ section{
   html{
       font-size:45%;
   } 
+
+  .logo{
+    margin-top: -.9rem;
+  }
 }
