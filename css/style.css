@@ -48,11 +48,11 @@ section{
 }
 
 .logo{
-    width: 20vw;
-    cursor: default ;
-    margin-bottom: -2rem;
-    margin-top: -1rem;
+    width: 15vw;
+    cursor: pointer ;
+    position: relative;
 }
+
 .navbar li{
     display: inline-block;
 }
@@ -444,12 +444,6 @@ section{
     #menu-icon{
         display: block;
     }
-
-    .logo{
-        width: 20rem;
-        cursor: default ;
-        margin-bottom: -3.6rem;
-    }
     
     .navbar{
         position:absolute;
@@ -560,19 +554,12 @@ section{
         width:100%;
     }
 
-    .logo{
-        margin-bottom: -3.5rem;
-    }
 }
 
 @media (max-width:420px){
     html{
         font-size:45%;
     } 
-
-    .logo{
-        margin-bottom: -3.4rem;
-    }
 
 }
 

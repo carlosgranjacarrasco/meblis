@@ -48,9 +48,9 @@ section{
 }
 
 .logo{
-    width: 20vw;
-    margin-bottom: -2.4rem;
-    margin-top: -1rem;
+    width: 15vw;
+    cursor: pointer ;
+    position: relative;
 }
 
 .navbar a, ul{
@@ -68,6 +68,7 @@ section{
 
 .volver a:hover, .volver a.active{
     cursor: pointer;
+    font-size: 2.2rem;   
 }
 
 #menu-icon{
@@ -224,32 +225,14 @@ section{
 
 }
 
-@media (max-width:980px){
-
-    .logo{
-        width: 20rem;
-        cursor: default ;
-    }
-
-}
-
-
 @media (max-width:500px){
     html{
         font-size:50%;
     } 
-
-    .logo{
-        margin-bottom: -2.5rem;
-    }
 }
 
 @media (max-width:420px){
     html{
         font-size:45%;
     } 
-
-    .logo{
-        margin-bottom: -2.6rem;
-    }
 }

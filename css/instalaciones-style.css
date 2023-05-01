@@ -29,7 +29,7 @@ body{
 }
 
 section{
-  min-height: 70vh;
+  min-height: auto;
   padding: 9%;
 }
 
@@ -48,9 +48,9 @@ section{
 }
 
 .logo{
-  width: 20vw;
-  margin-bottom: -2.4rem;
-  margin-top: -1rem;
+  width: 15vw;
+  cursor: pointer ;
+  position: relative;
 }
 
 .navbar a, ul{
@@ -67,10 +67,10 @@ section{
 }
 
 .intro{
-  background: linear-gradient(to bottom,#fbeadd, #fffaf6);
+  background: linear-gradient(to bottom,#72dbf0, #fffaf6);
 }
 
-.texto1,.texto2{
+.texto1{
   text-align: center;
   margin-left: 5rem;
   margin-right: 5rem;
@@ -79,11 +79,6 @@ section{
 
 .texto1 p{
   font-size: 1.5rem;
-  display: inline-block;
-}
-
-.texto2 p{
-  font-size: 1rem;
   display: inline-block;
 }
 
@@ -306,6 +301,18 @@ section{
   opacity: .5;
 }
 
+.texto2{
+  width: 100vw;
+  background: linear-gradient(to bottom, #f5ddc3 ,#ceecf6);
+  height: 10vh;
+  margin-top: -5rem;
+}
+
+.texto2 p{
+  font-size: 1rem;
+  display: inline-block;
+}
+
 .pie{
   display:flex;
   justify-content: space-between;
@@ -334,10 +341,6 @@ section{
       padding: 10rem 3% 2rem;
   }
 
-  .contacto{
-      min-height: auto;
-  }
-
   .pie{
       padding:2rem 3%;
   }
@@ -347,12 +350,6 @@ section{
 @media (max-width:980px){
   #menu-icon{
       display: block;
-  }
-
-  .logo{
-      width: 20rem;
-      cursor: default ;
-      margin-bottom: -3.5rem;
   }
   
   .navbar{
@@ -423,8 +420,4 @@ section{
   html{
       font-size:45%;
   } 
-
-  .logo{
-    margin-top: -.9rem;
-  }
 }
