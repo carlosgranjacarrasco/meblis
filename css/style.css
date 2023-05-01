@@ -536,13 +536,7 @@ section{
         margin-bottom: -5rem;
     }
 
-    .inicio{
-        background: url(../imagenes/cielo1-pequeño.jpg) no-repeat;
-        background-size: cover;
-        background-attachment:fixed;
-        background-position: center center; 
-        min-height: auto;  
-    }
+   
 
 }
 
@@ -561,4 +555,13 @@ section{
         font-size:45%;
     } 
 
+    .inicio{
+        background: url(../imagenes/cielo1-pequeño.jpg) no-repeat;
+        background-size: cover;
+        background-attachment:fixed;
+        background-position: center center; 
+        min-height: auto;
+        width: 100vw;
+        height: 70vh;  
+    }
 }
