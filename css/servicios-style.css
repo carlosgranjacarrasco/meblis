@@ -225,6 +225,12 @@ section{
 
 }
 
+@media (max-width:660px){
+    .pie-texto p{
+        font-size: 2vw;     
+    }
+}
+
 @media (max-width:500px){
     html{
         font-size:50%;
@@ -236,3 +242,6 @@ section{
         font-size:45%;
     } 
 }
+
+
+

@@ -408,6 +408,10 @@ section{
       width:35vw;
   }
 
+  .pie-texto p{
+      font-size: 2vw;     
+  }
+
 }
 
 @media (max-width:500px){
