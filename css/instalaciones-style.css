@@ -305,6 +305,7 @@ section{
   width: 100vw;
   background: linear-gradient(to bottom, #f5ddc3 ,#ceecf6);
   height: 10vh;
+  text-align: center;
 }
 
 .texto2 p{
@@ -333,15 +334,22 @@ section{
 
 @media (max-width:1200px){
   .navbar a, ul{
-      font-size: 1.4rem;
+    font-size: 1.4rem;
   }
 
   section{
-      padding: 10rem 3% 2rem;
+    min-height: 20vh;
+  }
+  
+  .pie{
+    padding:2rem 3%;
   }
 
-  .pie{
-      padding:2rem 3%;
+  .texto2{
+    width: 100vw;
+    background: linear-gradient(to bottom, #f5ddc3 ,#ceecf6);
+    height: 10vh;
+    text-align: center;
   }
 
 }
