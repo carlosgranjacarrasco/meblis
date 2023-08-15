@@ -14,7 +14,7 @@
 :root{
   --bg-color:#fff;
   --text-color: #000000;
-  --main-color: #d31f6b;
+  --main-color: #f9e81d;
 }
 
 html{
@@ -54,31 +54,14 @@ section{
 }
 
 .navbar a, ul{
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   color:var(--text-color);
   margin-left: 4rem;
   list-style: none;
   transition: .3s;
-  font-weight: bold;
 }
 
 .navbar li{
-  display: inline-block;
-}
-
-.intro{
-  background: linear-gradient(to bottom,#72dbf0, #fffaf6);
-}
-
-.texto1{
-  text-align: center;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  isolation: isolate;
-}
-
-.texto1 p{
-  font-size: 1.5rem;
   display: inline-block;
 }
 
@@ -176,7 +159,7 @@ section{
   .text {
     color: #fff;
     text-shadow: .15rem .1rem #000000;
-    font-size: 1rem;
+    font-size: 1.5rem;
     position: absolute;
     width: 100%;
     text-align: center;
@@ -325,7 +308,7 @@ section{
 }
 
 .pie-texto p{
-  font-size: 1.6rem;
+  font-size: 13px;
   display: inline-block;
   justify-content: space-between;
   align-items: center;

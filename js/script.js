@@ -31,14 +31,15 @@ ScrollReveal().reveal(".home-content h1", {origin:"left"});
 
 function sendEmail(){
     Email.send({
-        SecureToken : "7974dc10-34f5-41b3-8ed1-f61f6a320d0c",
-        To : 'carlosgranjacarrasco@gmail.com',
-        From : 'carlosgranja2002@gmail.com',
+        SecureToken : "0bb93878-91e7-43f3-a064-999535e261d7",
+        To : 'meblis@hotmail.com',
+        From : "carlosgranjacarrasco@gmail.com",
         Subject : "Meblis",
-        Body : "Name: " + document.getElementById("name").value
+        Body : "Nombre: " + document.getElementById("name").value
+        + "<br> Apellido: " + document.getElementById("surname").value
         + "<br> Email: " + document.getElementById("email").value
-        + "<br> Phone: " + document.getElementById("phone").value 
-        + "<br> Message: " + document.getElementById("message").value
+        + "<br> Teléfono: " + document.getElementById("phone").value 
+        + "<br> Mensaje: " + document.getElementById("message").value
     }).then(
       message => alert("Se ha enviado su email correctamente")
     );
