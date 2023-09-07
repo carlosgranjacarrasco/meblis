@@ -95,9 +95,9 @@ section{
 }
 
 #menu-icon{
-    font-size:3.6rem;
-    color:var(--text-color);
-    display:none;
+  font-size:3.6rem;
+  color:var(--text-color);
+  display:none;
 }
 
 .titulo{
@@ -108,22 +108,22 @@ section{
 }
 /* Slideshow container */
 .slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-  }
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
   
   /* Hide the images by default */
-  .mySlides1,.mySlides2, .mySlides3, .mySlides4, .mySlides5  {
+.mySlides1,.mySlides2, .mySlides3, .mySlides4, .mySlides5  {
     display: none;
-  }
+}
 
-  .mySlides1:first-of-type, .mySlides2:first-of-type, .mySlides3:first-of-type, .mySlides4:first-of-type, .mySlides5:first-of-type{
+.mySlides1:first-of-type, .mySlides2:first-of-type, .mySlides3:first-of-type, .mySlides4:first-of-type, .mySlides5:first-of-type{
     display: block;
-  }
+}
   
   /* Next & previous buttons */
-  .prev1, .next1, .prev2, .next2, .prev3, .next3,  .prev4, .next4, .prev5, .next5 {
+.prev1, .next1, .prev2, .next2, .prev3, .next3,  .prev4, .next4, .prev5, .next5 {
     cursor: pointer;
     position: absolute;
     top: 65%;
@@ -137,26 +137,26 @@ section{
     user-select: none;
     background-color: #717171;
     isolation: isolate;
-  }
+}
   
   /* Position the "next button" to the right */
-  .next1, .next2, .next3, .next4, .next5 {
+.next1, .next2, .next3, .next4, .next5 {
     right: 0;
     border-radius: 1rem 0 0 1rem;
-  }
+}
 
-  .prev1, .prev2, .prev3, .prev4, .prev5 {
+.prev1, .prev2, .prev3, .prev4, .prev5 {
     left: 0;
     border-radius: 0 1rem 1rem 0;
-  }
+}
   
   /* On hover, add a black background color with a little bit see-through */
-  .prev1:hover, .next1:hover, .prev2:hover, .next2:hover, .prev3:hover, .next3:hover, .prev4:hover, .next4:hover, .prev5:hover, .next5:hover {
+.prev1:hover, .next1:hover, .prev2:hover, .next2:hover, .prev3:hover, .next3:hover, .prev4:hover, .next4:hover, .prev5:hover, .next5:hover {
     background-color: rgba(0,0,0,0.8);
-  }
+}
   
   /* Caption text */
-  .text {
+.text {
     color: #fff;
     text-shadow: .15rem .1rem #000000;
     font-size: 1.5rem;
@@ -168,19 +168,19 @@ section{
     width: 100%;
     text-align: center;
     margin-bottom: 2rem;
-  }
+}
   
   /* Number text (1/3 etc) */
-  .numbertext {
+.numbertext {
     color: #000000;
     font-size: 1rem;
     padding: .8rem 1.2rem;
     position: absolute;
     top: 1;
-  }
+}
   
   /* The dots/bullets/indicators */
-  .dot1, .dot2, .dot3, .dot4, .dot5 {
+.dot1, .dot2, .dot3, .dot4, .dot5 {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -191,27 +191,28 @@ section{
     transition: background-color 0.6s ease;
     top:20;
     isolation: isolate;
-  }
+}
 
-  .active, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover {
+.active, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover {
     background-color: #717171;
-  }
+}
 
   /* Fading animation */
-  .fade {
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
+}
   
-  @keyframes fade {
+@keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-  }
+}
 
 
 #mandarina{
     position: relative;
     background-color: #fff;
+    display: block;
     /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
 }
 
@@ -227,6 +228,7 @@ section{
 #sandia{
     position: relative;
     background-color: #fff;
+    display: block;
     /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
 }
 
@@ -242,6 +244,7 @@ section{
 #kiwi{
     position: relative;
     background-color: #fff;
+    display: block;
     /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
 }
 
@@ -257,6 +260,7 @@ section{
 #patio{
   position: relative;
   background-color: #fff;
+  display: block;
   /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
 }
 
@@ -272,6 +276,7 @@ section{
 #baño{
   position: relative;
   background-color: #fff;
+  display: block;
   /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
 }
 
@@ -412,6 +417,6 @@ section{
 
 @media (max-width:420px){
   html{
-      font-size:45%;
+      font-size:35%;
   } 
 }

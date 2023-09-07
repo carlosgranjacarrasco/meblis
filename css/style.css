@@ -259,8 +259,8 @@ section{
     margin-left: 4rem;
     margin-right: 4rem;
     isolation: isolate;
-    margin-top: -10rem;
     margin-bottom: 5rem;
+    margin-top: 5rem;
 }
   
 .texto-instalaciones2 p{
@@ -280,7 +280,7 @@ section{
 .instalaciones-contenido .instalaciones-img{
     flex: 1 1 30rem;
     text-align: center;
-    height: 40rem;
+    height: 30rem;
     overflow: hidden;
     transition:.5s ease;
     isolation: isolate;
@@ -429,6 +429,10 @@ section{
     font-weight: 500;
     font-size: 1.7em;
     margin-bottom: 10px;
+}
+
+.contact{
+    height: auto;
 }
 
 /* Form */
@@ -633,7 +637,7 @@ section{
 
 @media (max-width:991px){
     .contacto{
-        padding: 30px;
+        padding: 20px;
     }
 
     .box{
@@ -645,11 +649,6 @@ section{
         "map";
     }
 
-    .map{
-        min-height: 300px;
-        padding:0;
-    }
-
     .formBox .row50{
         display: flex;
         gap: 0;
@@ -657,10 +656,16 @@ section{
     }
 
     .inputBox{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
         width: 100%;
+    }
+
+    .contact{
+        padding: 30px;
+    }
+
+    .map{
+        min-height: 300px;
+        padding:0;
     }
 }
 
@@ -761,23 +766,19 @@ section{
     }
 
     .profes-img{
-        margin-bottom: -5rem;
+        margin-bottom: 5rem;
     }
 
     .pie-texto p{
         font-size: 2vw;     
     }
+
 }
 
 @media (max-width:500px){
     html{
         font-size:50%;
     } 
-
-    .contacto form .input-box input{
-        width:100%;
-    }
-
 }
 
 @media (max-width:420px){
