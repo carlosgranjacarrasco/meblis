@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline :none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --bg-color:#fff;
+    --text-color: #000000;
+    --main-color: #f9e81d;
+}
+
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+}
+
+#servicios{
+    position: relative;
+    background-color: #fff;
+    /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
+}
+
+#servicios::before{
+    content:"";
+    position: absolute;
+    background: url(../imagenes/ofertas-fondo.jpg) no-repeat;
+    background-size:cover;
+    inset:0;
+    opacity: .5;
+}
+body{
+    background: var(--bg-color);
+    color:var(--text-color);
+    font-family: poppins;
+}
+
+section{
+    min-height: 70vh;
+    padding: 10rem 9% 2rem; /* rem size is the percentage compared to its parent so in this case it's 10 times the size of its parent*/
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: url(../imagenes/cielo1.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    width: 20rem;
+    cursor: pointer ;
+    position: relative;
+}
+
+.navbar li{
+    display: inline-block;
+}
+
+.navbar a{
+    position: relative;
+    color:var(--text-color);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    font-weight:500;
+}
+
+.navbar a:after{
+    content:"";
+    position: absolute;
+    background-color: #f9e81d;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.navbar a:hover, .navbar a.active{
+    color:var(--main-color); 
+}
+
+.navbar a:hover:after{
+    width: 100%;
+}
+
+.volver a:hover, .volver a.active{
+    cursor: pointer;
+}
+
+#menu-icon{
+    font-size:3.6rem;
+    color:var(--text-color);
+    display:none;
+}
+
+.servicios{
+    background: linear-gradient(to bottom, #f4feff, #ddeefe ) ;
+}
+
+.servicios .titulo{
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+    isolation: isolate;
+}
+
+.servicios h2{
+    margin-bottom: 1rem;
+}
+
+.servicios .info{
+    text-align: center;
+    margin-bottom: 5rem;
+    isolation: isolate;
+}
+
+.servicios .info p{
+    font-size: 1.5rem;
+    isolation: isolate;
+}
+
+.servicios-contenedor{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+    margin-bottom: 10rem;
+    isolation: isolate;
+}
+
+.servicios-contenedor .servicios-caja{
+    flex: 1 1 100rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius:2rem ;
+    text-align: center;
+    border:.2rem solid var(--bg-color);
+    transition:.5s ease;
+    overflow: hidden;
+    box-shadow: 5px 10px 5px #888888;
+    background-color: #fff;
+    isolation: isolate;
+}
+
+.servicios-contenedor .servicios-caja:hover{
+    border-color:var(--main-color);
+    transform:scale(1.02);
+}
+
+.servicios-caja .children{
+    width: 10rem;
+    display: block;
+    margin: auto;
+    margin-top: -2rem;
+}
+
+.servicios-caja .fork{
+    width: 7rem;
+    display: block;
+    margin: auto;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
+
+.servicios-caja .clock{
+    width: 6rem;
+    display: block;
+    margin: auto;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
+
+.servicios-caja .languages{
+    width: 7rem;
+    display: block;
+    margin: auto;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
+
+.servicios-caja .sleeping{
+    width: 8rem;
+    display: block;
+    margin: auto;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
+
+.servicios .servicios-caja a{
+    color: var(--text-color);
+}
+
+.servicios h3{
+    font-size: 2.6rem;
+    display: inline;
+    position: relative; bottom: 1rem;
+}
+
+.servicios-caja p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+.servicios .servicios-title{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.pie{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: url(../imagenes/cielo1.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.pie-texto p{
+    font-size: 13px;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    isolation: isolate;
+}
+
+@media (max-width:1200px){
+    .navbar a, ul{
+        font-size: 1.4rem;
+    }
+
+    section{
+        padding: 10rem 3% 2rem;
+    }
+
+    .pie{
+        padding:2rem 3%;
+    }
+
+}
+
+@media (max-width:660px){
+    .pie-texto p{
+        font-size: 2vw;     
+    }
+}
+
+@media (max-width:500px){
+    html{
+        font-size:50%;
+    } 
+}
+
+@media (max-width:420px){
+    html{
+        font-size:45%;
+    } 
+}
+
+
+
