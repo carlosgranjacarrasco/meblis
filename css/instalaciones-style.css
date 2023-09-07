@@ -41,7 +41,7 @@ section{
   padding: 2rem 9%;
   background: url(../imagenes/cielo1.jpg) no-repeat;
   background-size: cover;
-  display: block;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
@@ -387,6 +387,12 @@ section{
       margin: -2rem;
   }
   
+}
+
+@media (max-width: 767px) {
+  #mandarina {
+  margin-top: 80px !important;
+  }
 }
 
 @media (max-width:660px){
