@@ -41,7 +41,7 @@ section{
   padding: 2rem 9%;
   background: url(../imagenes/cielo1.jpg) no-repeat;
   background-size: cover;
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
@@ -212,7 +212,6 @@ section{
 #mandarina{
     position: relative;
     background-color: #fff;
-    display: block;
     /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
 }
 
@@ -228,7 +227,6 @@ section{
 #sandia{
     position: relative;
     background-color: #fff;
-    display: block;
     /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
 }
 
@@ -244,7 +242,6 @@ section{
 #kiwi{
     position: relative;
     background-color: #fff;
-    display: block;
     /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
 }
 
@@ -260,7 +257,6 @@ section{
 #patio{
   position: relative;
   background-color: #fff;
-  display: block;
   /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
 }
 
@@ -276,7 +272,6 @@ section{
 #baño{
   position: relative;
   background-color: #fff;
-  display: block;
   /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
 }
 
