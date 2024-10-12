@@ -43,15 +43,16 @@ body {
     color: var(--text-color);
     font-family: 'MyFont', sans-serif; /* Fallback to sans-serif if the font fails to load */
     background-image: url('../imagenes/cielo1.jpg'); /* Adjust the path to the image if necessary */
-    background-size: 200% 100%; /* Ensure the background covers 100% of the width and height */
-    background-position: center;
-    background-attachment: fixed;
+    background-size: 100% auto; /* Adjust to the width of the screen while keeping the aspect ratio */
+    background-position: center top; /* Align the image at the top and center */
+    background-attachment: scroll; /* Allow the background to move when scrolling */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
+
 
 
 section{
@@ -1109,7 +1110,7 @@ section{
     }
 
     .letrasMeblis-img img{
-        margin-top: -10rem;
+        margin-top: -8rem;
     }
 
    .suelo-contenido{
