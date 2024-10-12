@@ -1,0 +1,333 @@
+@font-face {
+    font-family: 'MyFont';
+    font-family: 'LogoFont';
+    src: url('../tipografia/Muli.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LogoFont';
+    src: url('../tipografiaLogo/Catfiles.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline :none;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'LogoFont', sans-serif;
+}
+
+:root{
+    --bg-color:#fff;
+    --text-color: #000000;
+    --main-color: #fae017;
+}
+
+html{
+    font-size:62.5%;
+    overflow-x: hidden;
+}
+
+#servicios {
+    position: relative;
+    background-color: #fff;
+    z-index: 1; /* Ensure the section content is on top */
+}
+
+#servicios::before {
+    content: "";
+    position: absolute;
+    background: url(../imagenes/cielo1.jpg) no-repeat;
+    background-size: cover;
+    inset: 0;
+    opacity: 0.5;
+    z-index: -1; /* Make sure the background is behind the content */
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'MyFont', sans-serif; /* Fallback to sans-serif if the font fails to load */
+    background-image: url('../imagenes/cielo1.jpg'); /* Adjust the path to the image if necessary */
+    background-size: 100% auto; /* Adjust to the width of the screen while keeping the aspect ratio */
+    background-position: center top; /* Align the image at the top and center */
+    background-attachment: scroll; /* Allow the background to move when scrolling */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+section{
+    min-height: 70vh;
+    padding: 10rem 9% 2rem; /* rem size is the percentage compared to its parent so in this case it's 10 times the size of its parent*/
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 9%;
+    background: url(../imagenes/cielo1.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    
+}
+
+.logo{
+    width: 11rem;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slight zoom */
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1)); /* Soft shadow */
+}
+
+.navbar li {
+    display: inline-block;
+}
+  
+.navbar a {
+    position: relative;
+    color: #333; /* Darker color for contrast */
+    font-family: "MyFont", sans-serif;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700; /* Corrected font-weight */
+    margin-left: 2rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:after {
+    content: "";
+    position: absolute;
+    background-color: #fae017;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #fae017; /* Matching hover color */
+    transform: translateY(-2px); /* Lift the text slightly on hover */
+}
+
+.navbar a:hover:after {
+    width: 100%;
+}
+
+.volver a:hover, .volver a.active{
+    cursor: pointer;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: #333;
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#menu-icon:hover {
+    color: #fae017; /* Change color on hover */
+}
+
+.servicios {
+    margin-top: 6rem;
+    background-color: #f7f7f7;
+    padding: 5rem 0;
+}
+
+.servicios .titulo {
+    font-size: 4rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 2; /* Ensure the title is above the background */
+}
+
+.servicios .info, .servicios-contenedor, .servicios-caja {
+    position: relative;
+    z-index: 2; /* Ensure all content is above the background */
+}
+
+
+.servicios .info {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.servicios .info p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.servicios-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 5%;
+}
+
+.servicios-caja {
+    flex: 1 1 30rem;
+    background: linear-gradient(135deg, #fff, #f0f0f0);
+    border-radius: 15px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    max-width: 30rem;
+}
+
+.servicios-caja:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.servicios-caja img {
+    width: 80px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.servicios-caja:hover img {
+    transform: scale(1.1);
+}
+
+.servicios-caja h3 {
+    font-size: 2.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.servicios-caja p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.servicios-caja:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: var(--main-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.servicios-caja:hover:before {
+    transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    .servicios-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicios-caja {
+        max-width: 100%;
+    }
+}
+
+.pie {
+    bottom: 0;
+    width: 100%;
+    padding: 0.5rem 9%;
+    background: url(../imagenes/cielo1.jpg) no-repeat bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.pie{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem 9%;
+}
+
+.pie-texto p{
+    font-size: 13px;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+  
+
+@media (max-width:1200px){
+    .navbar a, ul{
+        font-size: 1.4rem;
+    }
+
+    section{
+        padding: 10rem 3% 2rem;
+    }
+
+    .pie{
+        padding:2rem 3%;
+    }
+
+}
+
+@media (max-width:660px){
+    .pie-texto p{
+        font-size: 2vw;     
+    }
+}
+
+@media (max-width:500px){
+    html{
+        font-size:50%;
+    } 
+}
+
+@media (max-width:420px){
+    html{
+        font-size:45%;
+    } 
+}
+
+
+
