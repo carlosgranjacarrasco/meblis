@@ -1,18 +1,18 @@
-//Toggle Icon
-
 let menuIcon = document.getElementById("menu-icon");
 let navbar = document.getElementById("navbar");
 
-menuIcon.onclick = () =>{ //When you click on the icon menu the icon will turn in an x (if you want to exit that menu) and the class list will show
-    menuIcon.classList.toggle("bx-x");
-    navbar.classList.toggle("active");
-}
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle("bx-x"); // Toggle the X icon for the menu
+    navbar.classList.toggle("active"); // Toggle the active class for navbar visibility
+};
 
-//Remove Icone and navbar when a section is clicked
-navbar.onclick = () =>{ // = () ==> is an abreviation to let navbar.onclick = function (){
-    menuIcon.classList.remove("bx-x");
-    navbar.classList.remove("active");
-}
+// Remove icon and navbar when a section is clicked
+navbar.querySelectorAll("a").forEach(link => {
+    link.onclick = () => {
+        menuIcon.classList.remove("bx-x"); // Remove the X icon
+        navbar.classList.remove("active"); // Hide the navbar
+    };
+});
 
 //Scroll Reveal
 
@@ -44,4 +44,42 @@ function sendEmail(){
       message => alert("Se ha enviado su email correctamente")
     );
     
+}
+
+let slideIndex = 0;
+showSlides();
+
+// Function to display the slides
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+
+    setTimeout(showSlides, 5000); // Change slide every 5 seconds
+}
+
+// Function to manually change slides
+function plusSlides(n) {
+    slideIndex += n - 1; // Adjust index since showSlides increments it
+    showSlides();
+}
+
+// Function to go to a specific slide
+function currentSlide(n) {
+    slideIndex = n - 1; // Adjust index since showSlides increments it
+    showSlides();
 }

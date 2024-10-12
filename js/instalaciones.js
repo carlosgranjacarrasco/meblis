@@ -1,3 +1,20 @@
+let menuIcon = document.getElementById("menu-icon");
+let navbar = document.getElementById("navbar");
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle("bx-x"); // Toggle the X icon for the menu
+    navbar.classList.toggle("active"); // Toggle the active class for navbar visibility
+};
+
+navbar.querySelectorAll("a").forEach(link => {
+    link.onclick = () => {
+        menuIcon.classList.remove("bx-x"); // Remove the X icon
+        navbar.classList.remove("active"); // Hide the navbar
+    };
+});
+
+
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -126,3 +143,4 @@ function showSlides5(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
