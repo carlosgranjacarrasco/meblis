@@ -38,12 +38,12 @@ html{
     overflow-x: hidden;
 }
 
-body{
+body {
     background: var(--bg-color);
-    color:var(--text-color);
+    color: var(--text-color);
     font-family: 'MyFont', sans-serif; /* Fallback to sans-serif if the font fails to load */
     background-image: url('../imagenes/cielo1.jpg'); /* Adjust the path to the image if necessary */
-    background-size: cover;
+    background-size: 200% 100%; /* Ensure the background covers 100% of the width and height */
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
@@ -52,6 +52,7 @@ body{
     justify-content: flex-start;
     align-items: center;
 }
+
 
 section{
     min-height: auto;
@@ -1100,13 +1101,18 @@ section{
 
     .inicio{
         margin-top: 5rem;
+        height: 55vh;
     }
 
-    .suelo{
-        margin-top: 3rem;
+    .meblis-img img{
+        width: 90vw;
     }
 
-    .suelo-contenido{
+    .letrasMeblis-img img{
+        margin-top: -10rem;
+    }
+
+   .suelo-contenido{
         height: 10vh; /* Set the height to 30% of the viewport height */
     }
 }
