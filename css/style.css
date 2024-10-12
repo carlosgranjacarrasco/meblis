@@ -1,4 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@font-face {
+    font-family: 'MyFont';
+    font-family: 'LogoFont';
+    src: url('../tipografia/Muli.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LogoFont';
+    src: url('../tipografiaLogo/Catfiles.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -8,13 +21,16 @@
     border: none;
     outline :none;
     scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'LogoFont', sans-serif;
 }
 
 :root{
     --bg-color:#fff;
     --text-color: #000000;
-    --main-color: #f9e81d;
+    --main-color: #fae017;
 }
 
 html{
@@ -25,20 +41,29 @@ html{
 body{
     background: var(--bg-color);
     color:var(--text-color);
-    font-family: poppins;
+    font-family: 'MyFont', sans-serif; /* Fallback to sans-serif if the font fails to load */
+    background-image: url('../imagenes/cielo1.jpg'); /* Adjust the path to the image if necessary */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 section{
     min-height: auto;
-    padding: 10rem 9% 2rem; /* rem size is the percentage compared to its parent so in this case it's 10 times the size of its parent*/
 }
+
 
 .header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 0.5rem 9%;
     background: url(../imagenes/cielo1.jpg) no-repeat;
     background-size: cover;
     display: flex;
@@ -48,32 +73,37 @@ section{
 }
 
 .logo{
-    width: 20rem;
-    cursor: pointer ;
+    width: 11rem;
+    cursor: pointer;
     position: relative;
+    transition: transform 0.3s ease;
 }
 
-.navbar li{
+.logo:hover {
+    transform: scale(1.05); /* Slight zoom */
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1)); /* Soft shadow */
+}
+
+.navbar li {
     display: inline-block;
-}
-
-.navbar a{
+  }
+  
+  .navbar a {
     position: relative;
-    color:var(--text-color);
+    color: #333; /* Darker color for contrast */
+    font-family: "MyFont", sans-serif;
     text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 700; /* Corrected font-weight */
     margin-left: 2rem;
-    font-size: 1.8rem;
     letter-spacing: 0.5px;
-    padding: 0 10px;
-    font-weight:500;
-}
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
 
 .navbar a:after{
     content:"";
     position: absolute;
-    background-color: #f9e81d;
+    background-color: #fae017;
     height: 3px;
     width: 0;
     left: 0;
@@ -89,27 +119,14 @@ section{
     width: 100%;
 }
 
-#menu-icon{
-    font-size:3.5rem;
-    color:var(--text-color);
-    display:none;
+#menu-icon {
+    font-size: 3.6rem;
+    color: #333;
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.inicio:before {
-    content: "";
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -10;
-    background: url(../imagenes/cielo1.jpg) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
 .meblis-img img{
     animation: floatImage 4s ease-in-out infinite;
@@ -117,12 +134,12 @@ section{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width:30vw;
+    width:50vw;
     position: relative;
     bottom: 5rem;
 }
 
-.isla-img img{
+.letrasMeblis-img img{
     animation: floatImage 4s ease-in-out infinite;
     animation-delay: 0.2s;
     margin-top: 1px;
@@ -130,7 +147,7 @@ section{
     margin-right: auto;
     width:50vw;
     display: block;
-    margin-top: -14vw;
+    margin-top: -10vw;
 }
 
 @keyframes floatImage{ /* This will make the image float down to -3.4 at 50% of its animation and back up to 0 at 100% of its animation */
@@ -145,70 +162,121 @@ section{
     }
 }
 
-.acerca{
-    background: #ffffff;
+.suelo {
+    width: 100vw; /* The section takes up 95% of the viewport width */
+    margin: 0 auto; /* Center the section horizontally */
 }
 
-.acerca .titulo{
+.suelo-contenido {
+    position: relative;
+    border-radius: 20px 20px 0 0;
+    padding: 2rem; /* Adjust padding if necessary */
+    max-width: 100%; /* Ensure it doesn't exceed 100% of the parent container */
+    width: 100%; /* Make the div take up the full width of its container */
+    height: 37vh; /* Set the height to 30% of the viewport height */
+    margin-top: -10vh;
+}
+
+.suelo-contenido::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../imagenes/sueloMeblis.png) no-repeat center center;
+    background-size: cover; /* Stretch the image to cover the entire section */
+    pointer-events: none; /* Allow clicks to pass through the pseudo-element */
+}
+
+.acerca {
+    display: flex; /* Use flexbox to position sections side by side */
+    width: 100vw; /* Full viewport width */
+    min-height: 100vh; /* Minimum height of 100vh, but can grow based on content */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+.acerca .acerca-contenido {
+    flex: 1; /* Take up 50% of the width */
+    max-width: 50vw;
+    padding: 5rem;
+    background-color: #ffffff; /* Fallback background color */
+    z-index: 1; /* Ensure it stays above the pseudo-element */
+    position: relative;
+}
+
+.acerca .acerca-contenido::before {
+    content: "";
+    position: absolute;
+    background: url(../imagenes/acerca.jpg);
+    background-size: cover;
+    inset: 0;
+    opacity: .05;
+    z-index: 0;
+}
+
+.acerca-bg {
+    flex: 1; /* Take up the remaining 50% of the width */
+    background: url(../imagenes/acerca.jpg) no-repeat right center; /* Position background to show the right side of the image */
+    background-size: cover;
+    max-width: 50vw; /* Ensure it takes up only 50% of the width */
+    min-height: 100vh; /* Ensure it matches the height of the left section */
+}
+
+/* Title and paragraph styling */
+.acerca .titulo {
     text-align: center;
     font-size: 4.5rem;
     margin-bottom: 3rem;
     margin-top: 5rem;
 }
 
-
-.acerca-contenido{
-    margin-left: 5rem;
-    margin-right: 5rem;
-    text-align: justify;
-}
-
-.p1{
+.p1 {
     text-align: center;
 }
 
-.acerca-contenido .p1 p{
+.acerca-contenido .p1 p {
     font-size: 2rem;
-    display: inline;
     display: inline-block;
 }
-.acerca-contenido .p2 p{
-    font-size: 1.4rem;
+
+.acerca-contenido .p2 p {
+    font-size: 1rem;
     display: inline-block;
     font-style: italic;
     margin-bottom: 10rem;
 }
 
-.color{
-    margin:0;
+/* Gradient text animation */
+.color {
+    margin: 0;
     line-height: 1;
-    color:transparent;
-    background-image: linear-gradient(to left, #2ecc71,#3498db,#9b59b6,#f39c12 );
-    -webkit-background-clip:text;
-    background-clip:text;
+    color: transparent;
+    background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+    -webkit-background-clip: text;
+    background-clip: text;
     animation: color 5s linear infinite;
-    -webkit-background-size:500%;
+    -webkit-background-size: 500%;
     background-size: 500%;
 }
 
-@keyframes color{
-    0%{
+@keyframes color {
+    0% {
         background-position: 0 100%;
     }
-    50%{
+    50% {
         background-position: 100% 0;
     }
-    100%{
+    100% {
         background-position: 0 100%;
     }
-    
 }
 
-.junta img{
-    width:20rem;
+.junta img {
+    width: 20rem;
 }
 
-.acerca .junta{
+.acerca .junta {
     margin-top: 6rem;
     margin-bottom: 6rem;
     justify-content: center;
@@ -216,178 +284,468 @@ section{
     text-align: center;
 }
 
-#instalaciones{
-    scroll-margin-top: 100px;
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .acerca {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .acerca .acerca-contenido {
+        max-width: 100vw; /* Make the content take the full width of the page */
+        padding: 5rem 5rem; /* Adjust padding for better spacing on small screens */
+    }
+
+    .acerca-bg {
+        display: none; /* Hide the background div on smaller screens */
+    }
+
+    .acerca .titulo {
+        font-size: 3.5rem; /* Adjust title size for smaller screens */
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .acerca-contenido .p1 p {
+        font-size: 1.8rem; /* Adjust paragraph size for smaller screens */
+    }
+
+    .acerca-contenido .p2 p {
+        font-size: 1.4rem; /* Adjust italic text size for smaller screens */
+        margin-bottom: 6rem;
+    }
 }
 
-.instalaciones{
+@media (max-width: 480px) {
+    .acerca .titulo {
+        font-size: 2.5rem; /* Further reduce title size for very small screens */
+    }
+
+    .acerca-contenido .p1 p {
+        font-size: 1.6rem; /* Adjust paragraph size for very small screens */
+    }
+
+    .acerca-contenido .p2 p {
+        font-size: 1.2rem; /* Adjust italic text size for very small screens */
+        margin-bottom: 4rem;
+    }
+}
+
+
+/* Remove gap between sections */
+.slideshow-section {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
     position: relative;
-    background-color: #ffffff;
-    /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
+    margin-top: 0;
+    padding-top: 0;
+    overflow: hidden; /* Ensure content doesn't overflow */
 }
 
-.instalaciones::before{
-    content:"";
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full height to match the section */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    position: relative; /* For overlay and dots positioning */
+    height: 100%; /* Full height for each slide */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire slide area while maintaining aspect ratio */
+    vertical-align: middle;
+}
+
+/* Dark overlay for the images */
+.slide::before {
+    content: "";
     position: absolute;
-    background: url(../imagenes/servicios-fondo.jpg) no-repeat;
-    background-size:cover;
-    inset:0;
-    opacity: .1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+    z-index: 1;
 }
 
-.instalaciones .titulo{
-    text-align: center;
-    font-size: 4.5rem;
-    margin-bottom: 2rem;
-    isolation: isolate;
+.slide img {
+    position: relative;
+    z-index: 0; /* Ensure images stay behind the overlay */
 }
 
-.texto-instalaciones{
-    text-align: center;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    isolation: isolate;
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
-  
-.texto-instalaciones p{
-    font-size: 1.5rem;
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 5vw; /* Dynamic width based on viewport width */
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 2vw; /* Dynamic font size based on viewport width */
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 2; /* Ensure buttons are above the overlay */
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Dots/bullets/indicators */
+.dots-container {
+    position: absolute;
+    bottom: 3vh; /* Position dots slightly above the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.dot {
+    cursor: pointer;
+    height: 1.5vh; /* Dynamic height based on viewport height */
+    width: 1.5vh; /* Dynamic width based on viewport height */
+    margin: 0 0.5vw; /* Dynamic margin based on viewport width */
+    background-color: rgba(255, 255, 255, 0.8); /* White dots with slight transparency */
+    border-radius: 50%;
     display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-.texto-instalaciones2{
+.active, .dot:hover {
+    background-color: white; /* Fully opaque when active or hovered */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .prev, .next {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+
+    .dot {
+        height: 2vh;
+        width: 2vh;
+        margin: 0 1vw;
+    }
+}
+
+
+
+
+/* General layout for the instalaciones section */
+.instalaciones {
+    width: 100vw; /* Full viewport width */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    background-color: #ffffff; /* Set a white background for the entire section */
+}
+
+/* Top Section Styling */
+.instalaciones-top {
+    padding: 4rem 2rem 2rem; /* Add top padding and reduce bottom padding */
     text-align: center;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    isolation: isolate;
-    margin-bottom: 5rem;
-    margin-top: 5rem;
-}
-  
-.texto-instalaciones2 p{
-    font-size: 1.5rem;
-    display: inline-block;
+    background-color: inherit; /* Inherit the white background from the parent */
 }
 
-.instalaciones-contenido{
-    display:flex;
+.instalaciones .titulo {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.texto-instalaciones p {
+    font-size: 1.5rem;
+}
+
+/* Middle Section Styling */
+.instalaciones-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh; /* Middle section occupies half of the viewport height */
+    background-color: inherit; /* Inherit the white background from the parent */
+    padding: 0 10vw; /* Add horizontal padding to bring images closer */
+}
+
+.instalaciones-left {
+    width: 50vw; /* Left side takes up half of the viewport width */
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap:2rem;
-    isolation: isolate;
 }
 
-.instalaciones-contenido .instalaciones-img{
-    flex: 1 1 30rem;
+.instalaciones-right {
+    width: 50vw; /* Right side takes up half of the viewport width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instalaciones-left .instalaciones-img {
+    width: 50%; /* Image container occupies 50% of the left section */
+    height: 100%; /* Occupies full height of its section */
     text-align: center;
-    height: 30rem;
-    overflow: hidden;
-    transition:.5s ease;
-    isolation: isolate;
-    transition: 1s;
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.instalaciones-img img{
-    display:block;
-    margin-top: 5rem;
-    animation: casa 5s ease-in-out infinite;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:15vw;
+.instalaciones-right .instalaciones-img {
+    width: 45%; /* Image container occupies 45% of the right section */
+    height: 100%; /* Occupies full height of its section */
+    text-align: center;
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.instalaciones-contenido .grande{
-    display:block;
-    margin-top: 5rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:17vw;
+.instalaciones-img img {
+    width: 100%; /* Image fully fills the container width */
+    height: 100%; /* Image fully fills the container height */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    transition: transform 1s;
 }
 
-.instalaciones-img:hover{
-    transform:scale(1.1);
+.instalaciones-img:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
-.instalaciones-img p{
+.instalaciones-img p {
     font-weight: bold;
-    color: #000000;
-    margin-top: .3rem;
-    font-size: 2rem;
+    color: #000;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Bottom Section Styling */
+.instalaciones-bottom {
+    padding: 2rem 8rem 4rem; /* Increase left and right padding to create more space */
+    text-align: center;
+    background-color: inherit; /* Inherit the white background from the parent */
+}
+
+.texto-instalaciones2 p {
+    font-size: 1.3rem; /* Make the text slightly smaller */
+    display: inline-block;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .instalaciones-middle {
+        flex-direction: column;
+        height: auto; /* Adjust height for smaller screens */
+        padding: 0; /* Remove extra padding on smaller screens */
+    }
+
+    .instalaciones-left, .instalaciones-right {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .instalaciones-left .instalaciones-img,
+    .instalaciones-right .instalaciones-img {
+        width: 100%; /* Make image containers full-width on smaller screens */
+        height: auto; /* Allow the height to adjust naturally on smaller screens */
+    }
+
+    .instalaciones-img img {
+        width: 30vw; /* Make the image take up 30% of the viewport width */
+        height: auto; /* Maintain aspect ratio on smaller screens */
+        margin: 0 auto; /* Center the image within the container */
+        display: block;
+    }
+
+    .instalaciones .titulo {
+        font-size: 2.5rem; /* Adjust the title size */
+    }
+
+    .texto-instalaciones p, .texto-instalaciones2 p {
+        font-size: 1.2rem; /* Adjust text size */
+    }
+
+    .instalaciones-img p {
+        font-size: 1.2rem; /* Adjust the font size for the captions */
+    }
+
+    .instalaciones-bottom {
+        padding: 2rem 4rem; /* Reduce padding on smaller screens */
+    }
 }
 
 
-.profes{
+.profes {
+    width: 100vw; /* Ensure the section covers the full viewport width */
     min-height: 50vh;
     position: relative;
-    background-color: #ffffff;
-    /* You could have here background-color: #0000; in order to add a dark background to have more contrast */
+    background-color: #f7f7f7; /* Soft background color */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically if needed */
+    padding: 3rem 1rem; /* Add padding to the entire section */
 }
 
-.profes::before{
-    content:"";
-    position: absolute;
-    background: url(../imagenes/confetti.jpg) no-repeat;
-    background-size:cover;
-    inset:0;
-    opacity: .1;
-    z-index: 0;
-}
-
-.profes .titulo{
+.profes .titulo {
     text-align: center;
     font-size: 4.5rem;
-    margin-bottom: 5rem;
-    isolation: isolate;
+    margin-bottom: 3rem;
+    color: #333; /* Darker text color for contrast */
 }
 
-.profes-contenido{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.profes-contenido {
+    position: relative;
+    padding: 3rem;
+    width: 100%; /* Ensure the content takes up the full width */
+    background-color: #fff;
+    box-sizing: border-box; /* Include padding in width calculation */
+    z-index: 1; /* Ensure it stays above the background */
+    border-radius: 15px; /* Add border-radius for smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.profes-contexto {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: stretch;
     flex-wrap: wrap;
-    gap:1rem;
-    margin-bottom: 10rem;
-    isolation: isolate;
-
+    gap: 2rem; /* Increase gap for better spacing */
 }
 
-.profes-contenido .profes-img{
-    flex: 1 1 30rem;
+.profes-contexto .profes-img {
+    flex: 1 1 15vw; /* Ensure each container is at least 15vw wide */
     text-align: center;
-    height: 35rem;
-    overflow:inherit;
-    transition:.5s ease;
-    isolation: isolate;
-
+    overflow: hidden;
+    background-color: #ffffff; /* White background for each card */
+    padding: 5rem 1.5rem; /* Add padding inside each card */
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for each card */
 }
 
-.profes-img img{
-    border-radius:15rem ;
-    border:solid 2px #e2dbfc;
-    border-width: 0.5rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:10vw;
+.profes-contexto .profes-img:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
-.profes-img .p1{
+
+.profes-img img {
+    border-radius: 40%; /* Increase the roundness of the image corners */
+    border: solid 0.5rem #83e0f2; /* Soft purple border */
+    width: 14rem; /* Increased width */
+    height: 18rem; /* Increased height to make it taller */
+    object-fit: cover; /* Ensure the image fits within the container while maintaining aspect ratio */
+    margin-bottom: 1.5rem; /* Add space below the image */
+}
+
+.profes-img .p1 {
     margin-top: .5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    color: #333; /* Darker text color for better contrast */
 }
-.profes-img p{
+
+.profes-img p {
     margin-top: .3rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    color: #666; /* Softer text color for less important text */
+    line-height: 1.4;
 }
 
-.profes-contenido .profes-img:hover{
-    transform:scale(1.05);
+@media (max-width: 991px) {
+    .profes {
+        padding: 2rem 1rem; /* Adjust padding for screens smaller than 991px */
+    }
+
+    .profes-contexto .profes-img {
+        flex: 1 1 30vw; /* Make each card take up 45% of the viewport width */
+        max-width: 45vw; /* Ensure the max width is 45% of the viewport width */
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .profes-img img {
+        width: 12rem; /* Adjusted width for smaller screens */
+        height: 16rem; /* Adjusted height for smaller screens */
+        border-radius: 40%; /* Maintain the rounder corners on smaller screens */
+    }
+
+    .profes-img .p1 {
+        font-size: 1.6rem; /* Adjust font size for smaller screens */
+    }
+
+    .profes-img p {
+        font-size: 1.2rem; /* Adjust paragraph size for smaller screens */
+    }
 }
 
-.contacto{
-    background: linear-gradient(to bottom, #fdfdfd ,#ceecf6);
+@media (max-width: 768px) {
+    .profes {
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .profes .titulo {
+        font-size: 3rem; /* Smaller title size on mobile */
+    }
+
+    .profes-contexto .profes-img {
+        flex: 1 1 100%; /* Make each card full-width on smaller screens */
+        max-width: 100%; /* Ensure max-width is 100% for very small screens */
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+
+    .profes-img img {
+        width: 12rem; /* Adjusted width for smaller screens */
+        height: 16rem; /* Adjusted height for smaller screens */
+        border-radius: 40%; /* Maintain the rounder corners on smaller screens */
+    }
+
+    .profes-img .p1 {
+        font-size: 1.6rem; /* Adjust font size for smaller screens */
+    }
+
+    .profes-img p {
+        font-size: 1.2rem; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+
+
+.contacto-contenido {
+    position: relative; /* Ensure the pseudo-element is positioned correctly */
+    padding: 5rem;
+    width: 100vw; /* Make sure the width is 95% of the viewport width */
+    border-radius: 0 0 20px 20px;
+    background-color: #fff; /* Fallback background color */
+    box-sizing: border-box; /* Include padding in the element's width and height */
 }
 
 .contacto .titulo{
@@ -395,6 +753,7 @@ section{
     font-size: 4.5rem;
     margin-bottom: 3rem;
 }
+
 .form{
     grid-area: form;
 }
@@ -412,6 +771,7 @@ section{
     background: #ffffff;
     box-shadow: 0 5px 35px rgba(0,0,0,0.15);
 }
+
 .box{
     position: relative;
     display: grid;
@@ -436,7 +796,6 @@ section{
 }
 
 /* Form */
-
 .formBox{
     position: relative;
     width: 100%;  
@@ -498,7 +857,6 @@ section{
 }
 
 /* Info */
-
 .info{
     min-height: 50vh;
     position: relative;
@@ -509,10 +867,10 @@ section{
 .info::before{
     content:"";
     position: absolute;
-    background: url(../imagenes/cielo1.jpg) no-repeat;
-    background-size:cover;
-    inset:0;
-    opacity: .5;
+    background: url(../imagenes/contactoMeblis.jpg) no-repeat;
+    background-size: cover;
+    inset: 0;
+    opacity: .1;
     z-index: 0;
 }
 
@@ -522,6 +880,7 @@ section{
     margin-bottom: 10px;
     isolation: isolate;
 }
+
 .info h3{
     font-weight: 500;
     font-size: 1.7em;
@@ -552,13 +911,13 @@ section{
 }
 
 .info .infoBox div a{
-    color:var(--text-color);
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1.2em;
 }
 
 .sci{
-    margin-top:40px;
+    margin-top: 40px;
     display: flex;
     isolation: isolate;
     z-index: 100;
@@ -582,11 +941,11 @@ section{
 }
 
 .sci li a:hover{
-    color:#000;
+    color: #000;
 }
 
 .map{
-    padding:0;
+    padding: 0;
 }
 
 .map iframe{
@@ -594,6 +953,17 @@ section{
     height: 100%;
 }
 
+.pie {
+    bottom: 0;
+    width: 100%;
+    padding: 0.5rem 9%;
+    background: url(../imagenes/cielo1.jpg) no-repeat bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
 
 
 .pie{
@@ -601,10 +971,7 @@ section{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 9%;
-    background: url(../imagenes/cielo1.jpg) no-repeat;
-    background-size: cover;
-    background-position: bottom;
+    padding: 1.5rem 9%;
 }
 
 .pie-texto p{
@@ -621,8 +988,8 @@ section{
         font-size: 1.4rem;
     }
 
-    section{
-        padding: 10rem 3% 2rem;
+    .suelo-contenido{
+        height: 30vh; /* Set the height to 30% of the viewport height */
     }
 
     .contacto{
@@ -636,9 +1003,6 @@ section{
 }
 
 @media (max-width:991px){
-    .contacto{
-        padding: 20px;
-    }
 
     .box{
         grid-template-columns: 1fr;
@@ -667,11 +1031,17 @@ section{
         min-height: 300px;
         padding:0;
     }
+
+  
 }
 
 @media (max-width:980px){
     #menu-icon{
         display: block;
+    }
+
+    .suelo-contenido{
+        height: 25vh; /* Set the height to 30% of the viewport height */
     }
     
     .navbar{
@@ -719,61 +1089,9 @@ section{
         margin: -2rem;
     }
 
-    .profes-img img{
-        width:17vw;
-    }
-
-    .meblis-img img{
-        animation: floatImage 4s ease-in-out infinite;
-        margin-top: 10rem;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width:50vw;
-        position: relative;
-        bottom: 5rem;
-    }
-    
-    .isla-img img{
-        animation: floatImage 4s ease-in-out infinite;
-        animation-delay: 0.2s;
-        margin-top: 1px;
-        margin-left: auto;
-        margin-right: auto;
-        width:70vw;
-        display: block;
-        margin-top: -20vw;
-    }
-
-    .instalaciones-img img{
-        width:30vw;
-    }
-
-    .instalaciones-contenido .grande{
-        width:35vw;
-    }
     
 }
 
-@media (max-width:660px){
-
-    .instalaciones-img:first-child{
-        margin-bottom: -15rem;
-    }
-
-    .profes-img img{
-        width:30vw;
-    }
-
-    .profes-img{
-        margin-bottom: 5rem;
-    }
-
-    .pie-texto p{
-        font-size: 2vw;     
-    }
-
-}
 
 @media (max-width:500px){
     html{
@@ -788,3 +1106,14 @@ section{
 
 }
 
+@media (max-width: 1200px) {
+    .pie {
+        padding: 2rem 3%; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 660px) {
+    .pie-texto p {
+        font-size: 2vw; /* Adjust text size for very small screens */
+    }
+}
