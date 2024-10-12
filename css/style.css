@@ -86,9 +86,9 @@ section{
 
 .navbar li {
     display: inline-block;
-  }
+}
   
-  .navbar a {
+.navbar a {
     position: relative;
     color: #333; /* Darker color for contrast */
     font-family: "MyFont", sans-serif;
@@ -98,7 +98,7 @@ section{
     margin-left: 2rem;
     letter-spacing: 0.5px;
     transition: color 0.3s ease, transform 0.3s ease;
-  }
+}
 
 .navbar a:after{
     content:"";
@@ -1097,6 +1097,18 @@ section{
     html{
         font-size:50%;
     } 
+
+    .inicio{
+        margin-top: 5rem;
+    }
+
+    .suelo{
+        margin-top: 3rem;
+    }
+
+    .suelo-contenido{
+        height: 10vh; /* Set the height to 30% of the viewport height */
+    }
 }
 
 @media (max-width:420px){
