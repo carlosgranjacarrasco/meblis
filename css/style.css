@@ -43,15 +43,16 @@ body {
     color: var(--text-color);
     font-family: 'MyFont', sans-serif; /* Fallback to sans-serif if the font fails to load */
     background-image: url('../imagenes/cielo1.jpg'); /* Adjust the path to the image if necessary */
-    background-size: 100% auto; /* Adjust to the width of the screen while keeping the aspect ratio */
+    background-size: 100% 145vh; /* Ensure the background covers at least 65vh of the viewport */
     background-position: center top; /* Align the image at the top and center */
     background-attachment: scroll; /* Allow the background to move when scrolling */
-    min-height: 100vh;
+    min-height: 100vh; /* Ensure the body has a minimum height of 100vh */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
+
 
 
 
@@ -1042,7 +1043,26 @@ section{
         display: block;
     }
 
+    
+    body{
+        background-size: 100% 100vh; /* Ensure the background covers at least 65vh of the viewport */
+
+    }
+    .inicio{
+        margin-top: 5rem;
+        height: 55vh;
+    }
+
+    .meblis-img img{
+        width: 60vw;
+    }
+
+    .letrasMeblis-img img{
+        margin-top: -8rem;
+    }
+
     .suelo-contenido{
+        margin-top:10rem;
         height: 25vh; /* Set the height to 30% of the viewport height */
     }
     
@@ -1094,12 +1114,44 @@ section{
     
 }
 
-
-@media (max-width:500px){
+@media (max-width:700px){
     html{
         font-size:50%;
     } 
 
+    body{
+        background-size: 100% 100vh; /* Ensure the background covers at least 65vh of the viewport */
+
+    }
+    .inicio{
+        margin-top: 5rem;
+        height: 55vh;
+    }
+
+    .meblis-img img{
+        width: 70vw;
+    }
+
+    .letrasMeblis-img img{
+        margin-top: -8rem;
+    }
+
+   .suelo-contenido{
+        margin-top: -2rem;
+        height: 15vh; /* Set the height to 30% of the viewport height */
+    }
+}
+
+
+@media (max-width:550px){
+    html{
+        font-size:50%;
+    } 
+
+    body{
+        background-size: 100% 100vh; /* Ensure the background covers at least 65vh of the viewport */
+
+    }
     .inicio{
         margin-top: 5rem;
         height: 55vh;

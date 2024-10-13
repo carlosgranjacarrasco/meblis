@@ -19,7 +19,7 @@
     box-sizing: border-box;
     text-decoration: none;
     border: none;
-    outline :none;
+    outline: none;
     scroll-behavior: smooth;
 }
 
@@ -27,41 +27,25 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'LogoFont', sans-serif;
 }
 
-:root{
-    --bg-color:#fff;
+:root {
+    --bg-color: rgba(255, 255, 255, 0.95); /* Lowered opacity slightly */
     --text-color: #000000;
     --main-color: #fae017;
 }
 
-html{
-    font-size:62.5%;
+html {
+    font-size: 62.5%;
     overflow-x: hidden;
 }
 
-#servicios {
-    position: relative;
-    background-color: #fff;
-    z-index: 1; /* Ensure the section content is on top */
-}
-
-#servicios::before {
-    content: "";
-    position: absolute;
-    background: url(../imagenes/cielo1.jpg) no-repeat;
-    background-size: cover;
-    inset: 0;
-    opacity: 0.5;
-    z-index: -1; /* Make sure the background is behind the content */
-}
-
-body{
+body {
     background: var(--bg-color);
-    color:var(--text-color);
-    font-family: 'MyFont', sans-serif; /* Fallback to sans-serif if the font fails to load */
-    background-image: url('../imagenes/cielo1.jpg'); /* Adjust the path to the image if necessary */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    color: var(--text-color);
+    font-family: 'MyFont', sans-serif;
+    background-image: url('../imagenes/cielo1.jpg');
+    background-size: cover; /* Ensures background image covers the viewport */
+    background-position: center top;
+    background-attachment: scroll;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -69,12 +53,13 @@ body{
     align-items: center;
 }
 
-section{
+section {
     min-height: 70vh;
-    padding: 10rem 9% 2rem; /* rem size is the percentage compared to its parent so in this case it's 10 times the size of its parent*/
+    padding: 10rem 9% 2rem;
+    background: rgba(255, 255, 255, 0.9); /* Lighter transparency for content sections */
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -86,10 +71,9 @@ section{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    
 }
 
-.logo{
+.logo {
     width: 11rem;
     cursor: pointer;
     position: relative;
@@ -97,21 +81,21 @@ section{
 }
 
 .logo:hover {
-    transform: scale(1.05); /* Slight zoom */
-    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1)); /* Soft shadow */
+    transform: scale(1.05);
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 .navbar li {
     display: inline-block;
 }
-  
+
 .navbar a {
     position: relative;
-    color: #333; /* Darker color for contrast */
+    color: #333;
     font-family: "MyFont", sans-serif;
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: 700; /* Corrected font-weight */
+    font-weight: 700;
     margin-left: 2rem;
     letter-spacing: 0.5px;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -129,33 +113,29 @@ section{
 }
 
 .navbar a:hover, .navbar a.active {
-    color: #fae017; /* Matching hover color */
-    transform: translateY(-2px); /* Lift the text slightly on hover */
+    color: #fae017;
+    transform: translateY(-2px);
 }
 
 .navbar a:hover:after {
     width: 100%;
 }
 
-.volver a:hover, .volver a.active{
-    cursor: pointer;
-}
-
 #menu-icon {
     font-size: 3.6rem;
     color: #333;
-    display: none; /* Hidden by default */
+    display: none;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 #menu-icon:hover {
-    color: #fae017; /* Change color on hover */
+    color: #fae017;
 }
 
 .servicios {
     margin-top: 6rem;
-    background-color: #f7f7f7;
+    background-color: rgba(255, 255, 255, 0.5); /* Lower opacity to see background image better */
     padding: 5rem 0;
 }
 
@@ -166,14 +146,13 @@ section{
     margin-bottom: 3rem;
     font-weight: 700;
     position: relative;
-    z-index: 2; /* Ensure the title is above the background */
+    z-index: 2;
 }
 
 .servicios .info, .servicios-contenedor, .servicios-caja {
     position: relative;
-    z-index: 2; /* Ensure all content is above the background */
+    z-index: 2;
 }
-
 
 .servicios .info {
     max-width: 800px;
@@ -185,6 +164,7 @@ section{
     font-size: 1.6rem;
     line-height: 1.6;
     color: #666;
+    padding: 2rem;
 }
 
 .servicios-contenedor {
@@ -197,7 +177,8 @@ section{
 }
 
 .servicios-caja {
-    flex: 1 1 30rem;
+    flex: 1 1 auto;
+    min-width: 0;
     background: linear-gradient(135deg, #fff, #f0f0f0);
     border-radius: 15px;
     padding: 3rem;
@@ -206,7 +187,6 @@ section{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     position: relative;
-    max-width: 30rem;
 }
 
 .servicios-caja:hover {
@@ -235,6 +215,8 @@ section{
     font-size: 1.6rem;
     line-height: 1.6;
     color: #666;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .servicios-caja:before {
@@ -277,15 +259,15 @@ section{
     z-index: 100;
 }
 
-.pie{
-    display:flex;
+.pie {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 1.5rem 9%;
 }
 
-.pie-texto p{
+.pie-texto p {
     font-size: 13px;
     display: inline-block;
     justify-content: space-between;
@@ -293,40 +275,34 @@ section{
     z-index: 100;
 }
 
-  
-
-@media (max-width:1200px){
-    .navbar a, ul{
+@media (max-width: 1200px) {
+    .navbar a, ul {
         font-size: 1.4rem;
     }
 
-    section{
+    section {
         padding: 10rem 3% 2rem;
     }
 
-    .pie{
-        padding:2rem 3%;
-    }
-
-}
-
-@media (max-width:660px){
-    .pie-texto p{
-        font-size: 2vw;     
+    .pie {
+        padding: 2rem 3%;
     }
 }
 
-@media (max-width:500px){
-    html{
-        font-size:50%;
-    } 
+@media (max-width: 660px) {
+    .pie-texto p {
+        font-size: 2vw;
+    }
 }
 
-@media (max-width:420px){
-    html{
-        font-size:45%;
-    } 
+@media (max-width: 500px) {
+    html {
+        font-size: 50%;
+    }
 }
 
-
-
+@media (max-width: 420px) {
+    html {
+        font-size: 45%;
+    }
+}
