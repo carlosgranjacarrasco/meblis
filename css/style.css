@@ -342,6 +342,7 @@ section{
     margin-top: 0;
     padding-top: 0;
     overflow: hidden; /* Ensure content doesn't overflow */
+    background-color: #fff;
 }
 
 .slideshow-container {
